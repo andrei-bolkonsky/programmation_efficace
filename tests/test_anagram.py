@@ -15,8 +15,6 @@ def test_find_anagrams_of(word, expected):
                            [['chine', 'niche', 'chien'], ['charme', 'marche'], ['une', 'nue'], ['limace', 'malice']])])
 def test_find_anagrams_in_(sentence, expected):
     result = find_anagrams_in(sentence)
-    result.sort()
-    expected.sort()
-    result = list(map(sorted, result))
-    expected = list(map(sorted, expected))   
+    result = sorted(list(map(sorted, result)))
+    expected = sorted(list(map(sorted, expected)))
     assert result == expected
