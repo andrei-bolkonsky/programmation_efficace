@@ -1,5 +1,3 @@
-import sys 
-import math 
 from inputs_utils import read_file
 
 def find_anagrams_of(word):
