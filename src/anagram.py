@@ -1,9 +1,6 @@
 import sys 
 import math 
-
-# Enable local parallel imports
-sys.path.append('/Users/vcumer/Desktop/3_coding/programmation_efficace')
-from sample.inputs_utils import read_file
+from inputs_utils import read_file
 
 def find_anagrams_of(word):
     """Find all anagrams.
