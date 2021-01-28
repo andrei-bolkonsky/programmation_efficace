@@ -1,5 +1,4 @@
 import pytest 
-import sys 
 from anagram import find_anagrams_of 
 from anagram_in_sentence import find_anagrams_in
 
