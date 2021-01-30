@@ -21,7 +21,7 @@ brew install python
 ```
 
 #### 3. Pyenv
-````sh
+```sh
 brew update
 brew install pyenv
 brew install pyenv-virtualenv
