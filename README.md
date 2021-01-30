@@ -44,7 +44,7 @@ Install a default python version for pyenv:
 pyenv install 3.7.0
 ```
 
-### 4. Create the local project
+#### 4. Create the local project
 ```sh
 mkdir programmation_efficace
 pyenv virtualenv 3.6.6 programmation_efficace
