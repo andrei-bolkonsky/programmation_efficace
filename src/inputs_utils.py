@@ -33,7 +33,7 @@ def remove_accent_from(string):
                  .replace('°', '')
 
 def create_french_dict_from(file_path):
-    """Transform a text file containing (weight, word) tuuples into python dictionnary."""
+    """Transform a text file containing (weight, word) tuples into python dictionnary."""
     with open(file_path, 'r', encoding="ISO-8859-1") as file:
         lines = file.readlines()
 
@@ -52,6 +52,25 @@ def create_french_dict_from(file_path):
                 break
 
     return french_dict
+
+def create_words_list_from(file_path):
+    """transform a text file containing (weight, word) tuples into a python list of words."""
+    with open(file_path, 'r', encoding="ISO-8859-1") as file:
+        lines = file.readlines()
+    
+    words_list = []
+    for line in lines:
+        couple = line.strip().replace('\n', '').split(' ')
+        word = remove_accent_from(couple[1].lower())
+        is_not_char = False
+        for c in word:
+            if ord(c) < ord('a') or ord(c) > ord('z'):
+                is_not_char = True
+        if len(word) == 0 or is_not_char:
+            continue
+        words_list.append(word)
+    
+    return words_list
 
 if __name__ == "__main__":
     print(read_file())
